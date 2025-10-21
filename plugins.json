@@ -1,0 +1,22 @@
+[
+    {
+        "iconUrl": "",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/HaxerAhmed/Cinefreak-Extension",
+        "fileSize": 9761,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "jesan"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries"
+        ],
+        "version": 1,
+        "internalName": "CineFreak",
+        "description": "Scraper for Cinefreak.net movies and series",
+        "url": "https://raw.githubusercontent.com/HaxerAhmed/Cinefreak-Extension/builds/CineFreak.cs3",
+        "name": "CineFreak"
+    }
+]
