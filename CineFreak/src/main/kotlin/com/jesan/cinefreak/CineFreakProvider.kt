@@ -72,8 +72,11 @@ class CineFreakProvider : MainAPI() {
         if (poster.isBlank()) {
             poster = document.selectFirst(".post-thumbnail img[data-src]")?.attr("data-src") ?: ""
         }
-        val linkButtons = document.select("a:matchesOwn(?i)(Download Links|Watch Online|Download|Watch)")
-        val links = linkButtons.mapNotNull { it.absUrl("href") }.distinct()
+      
+val linkButtons = document.select("a[href]").filter { elem ->
+        val text = elem.text().lowercase()
+        text.contains("download") || text.contains("watch")
+    }   val links = linkButtons.mapNotNull { it.absUrl("href") }.distinct()
         val data = links.joinToString("+")
         return newMovieLoadResponse(title, url, TvType.Movie, data) {
             posterUrl = poster
